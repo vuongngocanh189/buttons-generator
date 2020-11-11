@@ -9,11 +9,60 @@
   </head>
 
   <body>
+    <h1>Buttons Generator!</h1>
+    <p>Design your own buttons</p>
 
-    <!--Main body-->
-    <h1>Hello!</h1>
-    <!--/Main body-->
+    <button id="final_btn">TEXT</button>
 
+    <div class="selection-wrapper">
+      <h3>FONTS</h3>
+      <div class="">
+        <label for="font-size">Size (10-50px):</label>
+        <input type="number" id="font-size" name="font-size" min="10" max="50">
+      </div>
+    </div>
+
+    <div class="selection-wrapper">
+      <h3>SPACE</h3>
+      <div class="">
+        <label for="padding">Padding (10-50px):</label>
+        <input type="number" id="padding" name="padding" min="10" max="50">
+      </div>
+      <div class="">
+        <label for="margin">Margin (10-50px):</label>
+        <input type="number" id="margin" name="margin" min="10" max="50">
+      </div>
+    </div>
+
+    <div class="selection-wrapper">
+      <h3>BORDER</h3>
+      <div class="">
+        <label for="border-radius">Border-radius (%):</label>
+        <input type="number" id="border-radius" name="border-radius" min="10" max="50">
+      </div>
+      <div class="">
+        <label for="margin">Color:</label>
+        <input type="number" id="margin" name="margin" min="10" max="50">
+      </div>
+    </div>
+
+    <div class="selection-wrapper">
+      <h3>COLORS</h3>
+      <div class="">
+        <label for="font-color">Text color:</label>
+        <input type="color" id="font-color" name="font-color" value="#555555">
+      </div>
+      <div class="">
+        <label for="bg-color">Background color:</label>
+        <input type="color" id="bg-color" name="bg-color" value="#ffffff">
+      </div>
+      <div class="">
+        <label for="border-color">Border color:</label>
+        <input type="color" id="border-color" name="border-color" value="#555555">
+      </div>
+    </div>
+
+    <footer>Version 1.0.0</footer>
     <script src="js/main.js?ver=1.0.0"></script>
   </body>
 

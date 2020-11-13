@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buttons generator</title>
+    <link rel="stylesheet" href="css/styles.css?ver=1.0.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <h1>Buttons Generator!</h1>
+    <p>Design your own buttons</p>
+
+    <div class="preview">
+      <button id="preview_btn">TEXT BUTTON</button>
+    </div>
+
+    <div class="action">
+      <a href="#">Export to CSS</a>
+      <a href="#">Import to WP</a>
+      <a href="#">Download as image</a>
+    </div><!--action-->
+
+    <div class="customization">
+      <div class="control-wrapper">
+        <h3>TEXT</h3>
+        <div class="">
+          <label for="btn-text">Text</label>
+          <input type="text" id="btn-text" name="btn-text">
+        </div>
+        <div class="">
+          <label for="font-size">Size</label>
+          <input type="number" id="font-size" name="font-size" min="10" max="50">
+          <span>px</span>
+        </div>
+        <div class="">
+          <label for="font-family">Font</label>
+          <select name="font-family" id="font-family">
+            <option value="arial">Arial</option>
+            <option value="open-sans">Open Sans</option>
+            <option value="montserrat">Montserrat</option>
+            <option value="lato">Lato</option>
+            <option value="raleway">Raleway</option>
+            <option value="roboto">Roboto</option>
+            <option value="load-more">Load other Google font</option>
+          </select>
+          <button id="bold">B</button>
+          <button id="underline">U</button>
+          <button id="italics">I</button>
+        </div>
+      </div><!--control-wrapper-->
+
+      <div class="control-wrapper">
+        <h3>COLORS</h3>
+        <div class="">
+          <label for="font-color">Text</label>
+          <input type="color" id="font-color" name="font-color" value="#555555">
+        </div>
+        <div class="">
+          <label for="border-color">Border</label>
+          <input type="color" id="border-color" name="border-color" value="#555555">
+        </div>
+        <div class="">
+          <label for="bg-color">Background</label>
+          <input type="color" id="bg-color" name="bg-color" value="#ffffff">
+        </div>
+      </div><!--control-wrapper-->
+
+      <div class="control-wrapper">
+        <h3>BORDER</h3>
+        <div class="">
+          <label for="border-radius">Border-radius</label>
+          <input type="number" id="border-radius" name="border-radius" min="10" max="50">
+          <span>px</span>
+        </div>
+        <div class="">
+          <label for="border-size">Size</label>
+          <input type="number" id="border-size" name="border-size" min="10" max="50">
+          <span>px</span>
+        </div>
+        <div class="">
+          <label for="border-style">Style</label>
+          <select name="font-family" id="font-family">
+            <option value="dotted">Dotted</option>
+            <option value="dashed">Dashed</option>
+            <option value="solid">Solid</option>
+            <option value="double">Double</option>
+            <option value="groove">Groove</option>
+            <option value="ridge">Ridge</option>
+            <option value="inset">Inset</option>
+            <option value="outset">Outset</option>
+            <option value="none">None</option>
+          </select>
+        </div>
+      </div><!--control-wrapper-->
+
+      <div class="control-wrapper">
+        <h3>SHADOW</h3>
+        <h4>Box shadow</h4>
+        <div class="">
+          <label for="box-shadow-h-offset">h-offset</label>
+          <input type="number" id="box-shadow-h-offset" name="box-shadow-h-offset">
+          <span>px</span>
+        </div>
+        <div class="">
+          <label for="box-shadow-v-offset">v-offset</label>
+          <input type="number" id="box-shadow-v-offset" name="box-shadow-v-offset">
+          <span>px</span>
+        </div>
+        <div class="">
+          <label for="box-shadow-spread">Spread</label>
+          <input type="number" id="box-shadow-spread" name="box-shadow-spread">
+          <span>px</span>
+        </div>
+        <div class="">
+          <label for="box-shadow-color">Box shadow</label>
+          <input type="color" id="box-shadow-color" name="box-shadow-color" value="#ffffff">
+        </div>
+
+        <h4>Text shadow</h4>
+        <div class="">
+          <label for="text-shadow-h-offset">h-offset</label>
+          <input type="number" id="text-shadow-h-offset" name="text-shadow-h-offset">
+          <span>px</span>
+        </div>
+        <div class="">
+          <label for="text-shadow-v-offset">v-offset</label>
+          <input type="number" id="text-shadow-v-offset" name="text-shadow-v-offset">
+          <span>px</span>
+        </div>
+        <div class="">
+          <label for="text-shadow-spread">Spread</label>
+          <input type="number" id="text-shadow-spread" name="text-shadow-spread">
+          <span>px</span>
+        </div>
+        <div class="">
+          <label for="text-shadow-color">Box shadow</label>
+          <input type="color" id="text-shadow-color" name="text-shadow-color" value="#ffffff">
+        </div>
+      </div><!--control-wrapper-->
+
+    </div><!--customization-->
+
+    <footer>Version 1.0.0</footer>
+    <script src="js/main.js?ver=1.0.0"></script>
+  </body>
+
+</html>

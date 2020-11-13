@@ -1,0 +1,10 @@
+/**
+ * Main styles
+ */
+footer {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-style: italic;
+  font-size: 0.8rem;
+}

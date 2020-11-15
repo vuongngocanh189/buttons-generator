@@ -26,34 +26,102 @@ html{
 }
 
 .page-wrapper .preview{
-    background-color:  hsl(30, 3%, 87%);
-    border: 1px solid gray;
+    background-color:  #dfdedd;
+    border: 1px solid #808080;
     height: 20vh;
     width: 30vw;  
 }
 
+
 .customization-grid{
-    width: 65%;
+    width: 80%;
     display: grid;
     grid-gap: 30px;
     grid-template-columns: auto auto;
-    background-color: hsl(30, 3%, 87%);
-    padding: 30px;
+    background-color: #dfdedd;
+    padding: 20px;
     margin: 10px;
-    border: solid 1px gray; 
+    border: solid 1px, #000000; 
     border-radius: 5px;
 }
 .control-wrapper{
-    background-color: hsl(28, 79%, 81%);
+    background-color: #f5cca8;
     padding: 20px;
     color: black;
     align-items: center;
     align-content: center;
 }
 
-h3{
+.control-wrapper h3{
     border: solid 2px black;
     border-radius: 10px;
     text-align: center;
-    box-shadow: coral 5px 3px;    
+    box-shadow: #ff7f50, 5px 3px;    
+}
+
+.control-wrapper .control-field{
+    width: 100%;
+}
+
+.control-wrapper label{
+    display: inline-block;
+    clear: left;
+    width: 100px;
+    text-align: left;
+
+}
+
+.control-wrapper input{
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*STYLING SLIDERS*/
+.ui-slider{
+    width: 100%; /*width of the outside container*/
+}
+
+.slider{
+    -webkit-appearance: none; /*overrider default CSS styles*/
+    appearance: none;
+    border-radius: 10px;
+    width: 50%;
+    height: 10px;
+    background: #ffffff;
+    opacity: 0.5;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+/*STYLING SLIDER'S THUMB IN CHROME, FIREFOX & IE*/
+.slider::-webkit-slider-thumb{ 
+    -webkit-appearance: none; /*overrider default look*/
+    outline: none;
+    width: 15px;
+    height: 15px;
+    margin-top: -2px;
+    border-radius: 20px;
+    border: solid #000000 3px;
+    background: #ffffff;
+    cursor: pointer;
+
+    box-shadow: 1px 1px 1px #000000;
+}
+
+.slider:hover{
+    opacity: 1; 
+}
+
+/*STYLING SLIDER'S TRACK*/
+.slider::-webkit-slider-runnable-track{
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #0000;
+    background: #ff7f50;
+    border-radius: 2px;
+    border: 1px, solid, #808080;
+}
+.slider:focus::-webkit-slider-runnable-track{
+    background: #f37a48;
 }

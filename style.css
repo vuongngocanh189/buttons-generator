@@ -34,10 +34,9 @@ html{
 
 
 .customization-grid{
-    width: 80%;
     display: grid;
     grid-gap: 30px;
-    grid-template-columns: auto auto;
+    grid-template-columns: 450px 800px;
     background-color: #dfdedd;
     padding: 20px;
     margin: 10px;
@@ -50,6 +49,12 @@ html{
     color: black;
     align-items: center;
     align-content: center;
+}
+
+.control-wrapper .col-right{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
 }
 
 .control-wrapper h3{

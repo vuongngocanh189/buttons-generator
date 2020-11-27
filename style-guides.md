@@ -4,9 +4,10 @@ The design us created with the following widths
     * Desktop 1440px
 COLORS
 Primary colors:
-    * Background: Orange Web FCA311 ; 
-    * Complementary elements: Oxford Blue 14213D, Platinum E5E5E5 
-    * Text:  black #00000
+    * Background: #202D58 
+    * Complementary elements: #54649C
+    * Text white #fffffff, #849CF8
+    * Border: #849CF8
 TYPOGRAPHY
     * Font-family: Roboto Mono
     * Font-size: 14px

@@ -16,7 +16,7 @@
     <p>Design your own buttons</p>
 
     <div class="preview">
-      <button id="preview_btn">TEXT BUTTON</button>
+      <button id="preview-btn">TEXT BUTTON</button>
     </div>
 
     <div class="action">
@@ -42,18 +42,17 @@
             <option value="lato">Lato</option>
             <option value="raleway">Raleway</option>
             <option value="roboto">Roboto</option>
-            <option value="load-more">Load other Google font</option>
           </select>
-          <div class="font-style">
-            <button id="bold"><b>B</b></button>
-            <button id="underline"><u>U</u></button>
-            <button id="italics"><i>I</i></button>
+          <div>
+            <button value="bold" class="font-style"><b>B</b></button>
+            <button value="underline" class="font-style"><u>U</u></button>
+            <button value="italics" class="font-style"><i>I</i></button>
           </div>
         </div>
 
         <div class="ui-slider"> <!--SLIDER-->
           <label for="font-size">Font size</label>
-            <input type="range" min="12px" max="50px" value="24" class="slider" id="range" name="font-size"> <span>px</span>
+            <input type="range" min="12" max="50" value="24" class="slider" id="font-size" name="font-size"> <span>px</span>
         </div>
 
       </div><!--control-wrapper-->
@@ -84,18 +83,18 @@
         <h3>BORDER</h3>
         <div class="ui-slider"> <!--SLIDER-->
           <label for="border-radius">Radius</label>
-          <input type="range" min="10" max="50" class="slider" id="range" name="radius">
+          <input type="range" min="0" max="100" class="slider" id="border-radius" name="radius">
           <span id="output"></span><span>px</span>
         </div>
 
         <div class="ui-slider"> <!--SLIDER-->
-          <label for="border-size">Size</label>
-          <input type="range"  min="10" max="50" class="slider" id="range" name="border-size">
+          <label for="border-width">Size</label>
+          <input type="range"  min="1" max="20" class="slider" id="border-width" name="border-width">
           <span id="output"></span><span>px</span>
         </div>
         <div class="control-field">
           <label for="border-style">Style</label>
-          <select name="font-family" id="font-family">
+          <select name="border-style" id="border-style">
             <option value="dotted">Dotted</option>
             <option value="dashed">Dashed</option>
             <option value="solid">Solid</option>

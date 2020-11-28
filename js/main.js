@@ -8,18 +8,13 @@ const HOVER_COLOR = document.querySelector('#hover-color');
 const BORDER_RADIUS = document.querySelector('#border-radius');
 const BORDER_WIDTH = document.querySelector('#border-width');
 const BORDER_STYLE = document.querySelector('#border-style');
-const FONT_STYLE = document.getElementsByClassName("font-style");
+const FONT_WEIGHT_BOLD = document.querySelector('#bold');
+const FONT_STYLE_ITALIC = document.querySelector('#italic');
+const TEXT_DECORATION_UNDERLINE = document.querySelector('#underline');
 
 const PREVIEW_BTN = document.querySelector('#preview-btn');
 
-PREVIEW_BTN.addEventListener('mouseenter', () => {
-  PREVIEW_BTN.style.backgroundColor = HOVER_COLOR.value;
-})
-
-PREVIEW_BTN.addEventListener('mouseleave', () => {
-  PREVIEW_BTN.style.backgroundColor = '#ffffff';
-})
-
+// update fields value to the preview button
 TEXT_FIELD.addEventListener('input', () => {
   if (TEXT_FIELD.value) {
     PREVIEW_BTN.innerText = TEXT_FIELD.value;
@@ -60,15 +55,42 @@ BORDER_WIDTH.addEventListener('input', () => {
   PREVIEW_BTN.style.borderWidth = BORDER_WIDTH.value + 'px';
 });
 
-// for (let style of FONT_STYLE) {
-//   style.addEventListener('click', () => {
-//     // Toggle .active class
-//     if (style.classList.contains('active')) {
-//       style.classList.remove('active');
-//       PREVIEW_BTN.style.fontStyle = 'normal';
-//     } else {
-//       style.classList.add('active');
-//       PREVIEW_BTN.style.fontStyle = style.value;
-//     }
-//   })
-// }
+// hover states
+PREVIEW_BTN.addEventListener('mouseenter', () => {
+  PREVIEW_BTN.style.backgroundColor = HOVER_COLOR.value;
+});
+
+PREVIEW_BTN.addEventListener('mouseleave', () => {
+  PREVIEW_BTN.style.backgroundColor = '#ffffff';
+});
+
+// text decoration controls: bold, italics, underline
+FONT_WEIGHT_BOLD.addEventListener('click', () => {
+  if (PREVIEW_BTN.style.fontWeight !== 'bold') {
+    FONT_WEIGHT_BOLD.classList.add('active');
+    PREVIEW_BTN.style.fontWeight = 'bold';
+  } else {
+    FONT_WEIGHT_BOLD.classList.remove('active');
+    PREVIEW_BTN.style.fontWeight = 'normal';
+  }
+})
+
+FONT_STYLE_ITALIC.addEventListener('click', () => {
+  if (PREVIEW_BTN.style.fontStyle !== 'italic') {
+    FONT_STYLE_ITALIC.classList.add('active');
+    PREVIEW_BTN.style.fontStyle = 'italic';
+  } else {
+    FONT_STYLE_ITALIC.classList.remove('active');
+    PREVIEW_BTN.style.fontStyle = 'normal';
+  }
+})
+
+TEXT_DECORATION_UNDERLINE.addEventListener('click', () => {
+  if (PREVIEW_BTN.style.textDecoration !== 'underline') {
+    TEXT_DECORATION_UNDERLINE.classList.add('active');
+    PREVIEW_BTN.style.textDecoration = 'underline';
+  } else {
+    TEXT_DECORATION_UNDERLINE.classList.remove('active');
+    PREVIEW_BTN.style.textDecoration = 'none';
+  }
+})

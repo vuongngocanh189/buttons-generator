@@ -6,122 +6,121 @@
 }
 
 html{
-    font-size:  14px;
-    font-family: 'Roboto Mono', monospace;
+    font-size:  1rem;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     position: relative;
-    background-color: #202D58 ; 
-    color: #ffffff;
+    background-color: #2ec194; 
+    color: #000000;
 }
 
 .page-wrapper{
-    font-family: 'Montserrat', sans-serif;
-    background-color: #202D58;
-    color: #ffffff;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #2ec194;
+    color: #000000;
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
-
+.page-wrapper h1{
+    text-transform: uppercase;
+}
 .page-wrapper .preview{
-    background-color: #202D58;
-    border: 1px solid #849CF8 ;
+    background-color: #ffffff;
+    border: 1px solid #849CF8;
+    width: 50%;
     height: 20vh;
-    width: 30vw;  
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+
 }
 
 .page-wrapper .action{
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 8px;
+    margin-right: 8px;
+    display: flex;
+    justify-items: center;
+    
 }
 
 .page-wrapper .action button{
-    width: 100px;
+    width: 120px;
+    margin: 20px; 
     border-radius: 10px;
     box-shadow: 2px 3px #14213D;
     transition-duration: 0.3s;
-    background-color: #849CF8;
+    background-color: #ffffff;
 }
 .page-wrapper .action button:hover{ /*add button's hover effect*/
-    background-color: #6C7395;
+    background-color: #2ce194;
     
 }
 .page-wrapper .action a{
-    color: #ffffff;
+    color: #000000;
     text-transform: uppercase;
     font-weight: 700;
     text-decoration: none;
 }
 
 .customization-grid{
-    width: 65%;
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: auto auto;
-    background-color: #202D58;
-    padding: 30px;
-    margin: 10px;
-    opacity: 0.8;
     border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 10px 10px 10px 10px;
 }
-.control-wrapper{
-    background-color: #54649C;
-    box-shadow: 10px 6px #14213D;
-    border-radius: 10px;
+.col{
+    background-color: #ffffff;
+    border-radius: 5%;
     padding: 20px;
-    color: #ffffff;
+    margin: 20px;
     font-weight: 800;
     align-items: center;
     align-content: center;
+    box-shadow: 20px 10px 10px rgba(0,0,0,0.3);
+}
+.col h3{
+    text-align:  center;
 }
 
-
-
-.control-wrapper .col-right{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 10px;
-}
-
-.control-wrapper h3{
-    border: solid 2px black;
-    border-radius: 10px;
-    text-align: left;    
-    padding-left: 20px;
-    background-color:  #849CF8;
-}
-
-.control-wrapper .font-style{
+.customization-grid .font-style{
     display: flex;
     flex-direction: row;
-    margin-top: 10px;
+    padding-top: 10px;
 }
-.control-wrapper .font-style button{
+.customization-grid .font-style button{
     width: 50px;
-    background-color: #849CF8;
+    margin: 5px;
+    background-color: #2ec194;
     border-radius: 15px;
     color: #ffffff;
     font-weight: 600;
 
 }
-.control-wrapper .control-field{
+.customization-grid .control-field{
+    display: inline-block;
     width: 100%;
+    align-items: flex-start;
 }
 
 
-.control-wrapper label{
-    display: inline-block;
+.col label{
+    display: inline-flex;
     clear: left;
     width: 100px;
     text-align: left;
 
 }
 
-.control-wrapper input{
+.col input{
     display: inline-block;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -186,12 +185,12 @@ html{
     height: 10px;
     cursor: pointer;
     box-shadow: 1px 1px 1px #0000;
-    background: #849CF8;
+    background: #2ec194;
     border-radius: 2px;
     border: 1px, solid #000000;
 }
 .slider:focus::-webkit-slider-runnable-track{
-    background: #849CF8;
+    background: #2ec194;
 }
 
 .slider::-moz-range-track{ /*for Firefox*/
@@ -199,7 +198,7 @@ html{
     height: 10px;
     cursor: pointer;
     box-shadow: 1px 1px 1px #0000;
-    background: #849CF8;
+    background: #2ec194;
     border-radius: 2px;
     border: 1px, solid, #000000;
 }
@@ -208,7 +207,7 @@ html{
     height: 10px;
     cursor: pointer;
     box-shadow: 1px 1px 1px #0000;
-    background: #849CF8;
+    background: #2ec194;
     border-radius: 2px;
     border: 1px, solid, #000000;
     border-width: 10px 0;
@@ -216,8 +215,8 @@ html{
 }
 
 /* MEDIA QUERIES FOR MOBILE*/
-@media only screen and (max-width: 375px){
-    /*On screens that are 375px or less, set these styles*/
+@media only screen and (max-width: 600px){
+    /*On screens that are 600px or less, set these styles*/
 
     .page-wrapper h1{
        text-align: center; 
@@ -234,48 +233,29 @@ html{
     .page-wrapper .preview{
         width: 80vw;
     }
+    .page-wrapper .action button{
+        width: 50%;
+        font-size: 0.8rem;
+        margin: 10px;
+    }
 
-    .control-wrapper label{
-        width: 80px;
+    .col label{
+        width: 100%;
         display: inline-block;
     }
 
-    .control-wrapper .col-right{
-        display: grid;
-        grid-template-columns: auto;
-    }
 
 }
-/*@media only screen and (max-width: 992px){
-    .page-wrapper{
-        min-width: 20vw;
-                
-    }
-    .page-wrapper h1{
-       text-align: center; 
-    }
-    .page-wrapper .customization-grid{
+@media only screen and (min-width: 992px){
+    .col .col-right{
         display: grid;
         grid-template-columns: auto auto;
-        margin: 10px 10px 10px 10px;
-
+        grid-gap: 10px;
     }
-
-    .page-wrapper .preview{
-        width: 80vw;
-    }
-    .page-wrapper .control-wrapper{
-        min-width: 30vw;
-    }
-
-    .control-wrapper label{
+    .control-field label{
         width: 100px;
         display: block;
     }
 
-    .control-wrapper .col-right{
-        display: grid;
-        grid-template-columns: auto;
-    }
 
-}*/
+}
